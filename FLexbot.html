@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Card Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 250px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .card h2 {
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Card Layout</h1>
+    
+    <div class="container">
+        <div class="card">
+            <img src="chinese cathy render.jpg" alt="cathy">
+            <h2>Cathy</h2>
+        </div>
+        
+        <div class="card">
+            <img src="sinister mark.jpg" alt="sinister mark">
+            <h2>sinister mark</h2>
+        </div>
+        
+        <div class="card">
+            <img src="factory.jpg" alt="endfield">
+            <h2>endfield</h2>
+        </div>
+        
+        <div class="card">
+            <img src="horse.jpg" alt="oguri cap">
+            <h2>oguri cap</h2>
+        </div>
+        
+        <div class="card">
+            <img src="teto.webp" alt="teto">
+            <h2>teto</h2>
+        </div>
+        
+        <div class="card">
+            <img src="mtg.webp" alt="mtg">
+            <h2>mtg</h2>
+        </div>
+    </div>
+</body>
+</html>
